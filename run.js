@@ -77,7 +77,7 @@ function uploadMaybe(items, endpoint, callback) {
     client.fetch(function(err, data) {
       if (err) {
         console.log(err);
-        setTimeout(requestLoop, config.deviceInterval);
+        // setTimeout(requestLoop, config.deviceInterval);
       } else {
         let transformed = mmcns.transform(data, config.sgvLimit);
 
@@ -99,7 +99,7 @@ function uploadMaybe(items, endpoint, callback) {
 
         uploadMaybe(newSgvs, entriesUrl, function() {
           uploadMaybe(newDeviceStatuses, devicestatusUrl, function() {
-            setTimeout(requestLoop, interval);
+            // setTimeout(requestLoop, interval);
           });
         });
       }

@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "engines": {
-    "node": "^10.15.2 || ^8.15.1",
+    "node": "14",
     "npm": "^6.4.1"
   },
   "dependencies": {

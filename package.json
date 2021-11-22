@@ -10,10 +10,6 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "engines": {
-    "node": "14",
-    "npm": "^6.4.1"
-  },
   "dependencies": {
     "dotenv": "*",
     "minimed-connect-to-nightscout": "https://github.com/jaismith/minimed-connect-to-nightscout.git"

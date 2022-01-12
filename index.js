@@ -1,9 +1,15 @@
-const { fetchData } = require('./fetchData')
+import {fetchData} from './fetchData.js';
 
-exports.scrapeDataToNightScout = (req, res) => {
+export const scrapeDataToNightScout = (req, res) => {
     fetchData().then((response) => {
         res.status(200).send('success')
     }).catch((err) => {
         res.status(500).send(err)
     });
 }
+
+fetchData().then((response) => {
+    // res.status(200).send('success')
+}).catch((err) => {
+    // res.status(500).send(err)
+});

@@ -5,7 +5,7 @@ const require = createRequire(import.meta.url);
 
 require('dotenv').config();
 
-const fs = require('fs');
+// const fs = require('fs');
 
 let mmcns = require('minimed-connect-to-nightscout');
 import got from 'got';
@@ -104,11 +104,11 @@ export const fetchData = async () => {
           return err;
         } else {
           let transformed = mmcns.transform(data, config.sgvLimit);
-          fs.writeFile('./test.json', JSON.stringify(transformed), err => {
-            if (err) {
-              console.log(err);
-            }
-          })
+          // fs.writeFile('./test.json', JSON.stringify(transformed), err => {
+          //   if (err) {
+          //     console.log(err);
+          //   }
+          // })
           let newSgvs = filterSgvs(transformed.entries);
           let newDeviceStatuses = filterDeviceStatus(transformed.devicestatus);
           uploadMaybe(newSgvs, entriesUrl, () => {

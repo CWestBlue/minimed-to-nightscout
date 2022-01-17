@@ -14,3 +14,6 @@ For update use the `npm update` command in the folder, because if there are fixe
 
 # Disclaimer
 This project is intended for educational and informational purposes only. It relies on a series of fragile components and assumptions, any of which may break at any time. It is not FDA approved and should not be used to make medical decisions. It is neither affiliated with nor endorsed by Medtronic, and may violate their Terms of Service.
+
+# Deploy 
+gcloud functions deploy NAME --entry-point scrapeDataToNightScout --runtime nodejs14 --trigger-http

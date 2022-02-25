@@ -74,7 +74,7 @@ const uploadMaybe = (items, endpoint, callback) => {
 
 const checkShouldConnect = () => {
   return new Promise((res, rej) => {
-    got.get('https://conner-nightscout.herokuapp.com/api/v1/entries.json?count=1', {responseType: 'json'})
+    got.get(`https://${process.env.WEBSITE_HOSTNAME}/api/v1/entries.json?count=1`, {responseType: 'json'})
     .then(gotRes => {
       const latestSg = gotRes.body[0];
       console.log(latestSg);
